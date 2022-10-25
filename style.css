@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+/* Base: font */
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Base: space */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base: list */
+ul {
+  list-style: none;
+}
+
+/* Base: link */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* a:link {
+    color: #1476b8;
+    font-weight: bold;
+    text-decoration: none;
+   }
+   a:visited {
+    color: #1430b8;
+   }
+   a:hover {
+    text-decoration: underline;
+   }
+   a:active {
+    color: #b81414;
+   } */
+/* Base: image */
+img {
+  max-width: 100%; /*sets its
+  maximum to the original image size*/
+  height: auto; /* for keeping aspect ratio*/
+  vertical-align: bottom; /* removes extra white-space below it*/
+}
+
+/* Base: screen reader only */
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+   }
+
+
+/* Page Grid: common to all viewports */
+.pageGrid {
+    /* display: grid;
+    grid-template-columns: 72px auto 72px;
+    grid-template-rows: 72px auto auto; */
+
+    display: grid;
+    grid-template-columns: 72px auto 72px;
+    grid-template-rows: 72px auto auto;
+    grid-template-areas: 
+    ". . menu"
+    "decor . sns"
+    "footer footer footer";
+
+}
+
+/* Navigation button */
+.nav-button{
+    grid-area: menu;
+    padding: 0;
+    outline: none;
+    border: none;
+    background-color: #98a718;
+    cursor: pointer;
+}
+
+/* Navigation button's white line */
+.nav-button::before,
+.nav-button::after{
+    content: '';
+    display: block;
+    margin: auto;
+    background-color: #ffff;
+    width: 32px;
+    height: 4px;
+    /* Each line is a 32 x 4 strip*/
+}
+
+.nav-button::before{
+    transform: translateY(-5px);
+    /* Move this strip up */
+}
+
+.nav-button::after {
+    transform: translateY(5px);
+    /* Move this strip down */
+   }
+
+   /* Vertical decorative text */
+
+.decor {
+    grid-area: decor;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    justify-self: start;
+    align-self: start;
+    margin-top: 257px;
+    margin-left: 10px;
+    color: #aaaaaa;
+    font-size: 20px;
+
+
+     }
+
+/* SNS menu */
+.sns{
+    grid-area: sns;
+    justify-self: end;
+    align-self: start;
+    margin-top: 187px;
+    margin-right: 10px;
+    display: grid;
+    gap: 30px;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
