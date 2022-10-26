@@ -1,36 +1,33 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <title>About Us | CASUAL</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin
-+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="pageGrid">
+
     <main>
         <div class="headimg partsGrid">
             <div class="site">CASUAL</div>
-            <figure><img src="img/tent-orange.jpg" alt=""></figure>
+            <figure>
+                <img src="img/tent-orange.jpg" alt="">
+            </figure>
         </div>
 
         <article class="article partsGrid">
             <h1>About Us</h1>
-            <p>CASUAL is a small but nature rich campsite that opened in 2001.
-                We provide unique information as
-                an outdoor media and portal to make
-                the outdoors more familiar and accessible.</p>
-            <p>A while ago, camping was an
-                extraordinary thing. But recently,
-                it has become very familiar with
-                the popularity of camping-themed
-                YouTube videos. It's casual and
-                enjoyable. </p>
+            <p>CASUAL is a small but nature-rich campsite that opened in 2001. We provide unique information as an
+                outdoor media and portal to make the outdoors more familiar and accessible. </p>
+            <p>A while ago, camping was an extraordinary thing. But recently, it has become very familiar with the
+                popularity of camping-themed YouTube videos. It's casual and enjoyable.</p>
 
             <div class="gallery">
                 <figure class="photoA"><img src="img/camp-food.jpg" alt=""></figure>
@@ -39,45 +36,42 @@
                 <figure class="photoD"><img src="img/camp-table.jpg" alt=""></figure>
             </div>
 
-
-            <p>Camping for the entire family
-                and the close group is exciting,
-                and also, solo camping is a fun
-                way to enjoy. The evolutions
-                around the outdoors, such as easy-going campsites, lightweight and
-                functional tools, and easy set-up tents, will help you dive into
-                nature.</p>
-            <p>Glamping is also your option.
-                It's a luxury and glamorous camping
-                style with comfortable amenities,
-                full-size beds, sofa, dining set,
-                meals, coffee maker, staging, etc.
-                Find a style that suits you.</p>
+            <p>Camping for the entire family and the close group is exciting, and also, solo camping is a fun way to
+                enjoy. The evolutions around the outdoors, such as easy-going campsites, lightweight and functional
+                tools, and easy set-up tents, will help you dive into nature.</p>
+            <p>Glamping is also your option. It's a luxury and glamorous camping style with comfortable amenities,
+                full-size beds, sofa, dining set, meals, coffee maker, staging, etc. Find a style that suits you.</p>
         </article>
     </main>
 
-    <!-- common element start -->
-    <button class="nav-button">
+    <button class="nav-button" onClick="navFunc()">
         <span class="sr-only">MENU</span>
     </button>
-    <!-- common element end -->
 
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="article.html">ABOUT</a></li>
+            <li><a href="#">CONTACT US</a></li>
+        </ul>
+    </nav>
 
-    <!-- common element start -->
     <ul class="sns">
-        <li><a href="#"><img src="img/logo-twitter.svg" alt=""></a></li>
-        <li><a href="#"><img src="img/logo-facebook.svg" alt=""></a></li>
-        <li><a href="#"><img src="img/logo-instagram.svg" alt=""></a></li>
+        <li><a href="#">
+                <img src="img/logo-twitter.svg" alt="Twitter">
+            </a></li>
+        <li><a href="#">
+                <img src="img/logo-facebook.svg" alt="Facebook">
+            </a></li>
+        <li><a href="#">
+                <img src="img/logo-instagram.svg" alt="Instagram">
+            </a></li>
     </ul>
-    <!-- common element end -->
 
-    <!-- common element start -->
     <div class="decor">
         Enjoy Active Outdoor Camping
     </div>
-    <!-- common element end -->
 
-    <!-- common element start -->
     <footer class="footer partsGrid">
         <div class="text">
             <div class="site">CASUAL</div>
@@ -87,12 +81,19 @@
                 +1-800-1234-5678
             </div>
         </div>
-
         <div class="chat">
-            <a href="#"><img src="img/chat.svg" alt=""><br>Chat Support</a>
+            <a href="#">
+                <img src="img/chat.svg" alt=""><br>
+                Chat Support
+            </a>
         </div>
     </footer>
-    <!-- common element end -->
+
+    <script>
+        function navFunc() {
+            document.querySelector('html').classList.toggle('open');
+        }
+    </script>
 </body>
 
 </html>
